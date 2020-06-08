@@ -27,11 +27,20 @@
 }
 
 body{
+	background-color: #F7FEFF;
 	// font-family: "SF Pro Rounded", "SF Pro Text", "Arial", Sans-Serif;
 	// font-size: 16px;
 	font-family: "Arial", Sans-Serif;
 	font-size: 16px;
 	line-height: 1.4;
+}
+
+a{
+	color:blue;
+	text-decoration: underline;
+	&:hover{
+		opacity:.65;
+	}
 }
 
 code,pre{
@@ -76,7 +85,6 @@ code,pre{
 					color:gray;
 				}
 				&:hover{
-					color:blue;
 					padding-left:2px;
 				}
 			}
@@ -85,10 +93,11 @@ code,pre{
 }
 
 .content-container{
-	margin-left:g(.5,12);
+	margin:0px;
 	flex-basis: g(12,12);
 	width: g(12,12);
 	@media(min-width:600px){
+		margin-left:g(.5,12);
 		flex-basis: g(5,12);
 		max-width:600px;
 	}
@@ -112,13 +121,14 @@ code,pre{
 	text-decoration:none;
 	padding: 8px 12px;
 	background-image: linear-gradient(0deg, #F6F6F6 0%, #FCFCFC 15%, #FCFCFC 88%, #FFFFFF 100%);
-	border: 1px solid #dedede;
+	border: 1px solid #C2DFE3;
 	/* Sketch doesnt export gradient borders at this point */
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.10);
 	border-radius: 4px;
   	white-space: nowrap;
   &:hover{
-  	border: 1px solid DEEPSKYBLUE;
+  	border: 1px solid #9DB8BF;
+  	opacity:1;
   }
   &:focus{
 	background-image: linear-gradient(0deg, #FFFFFF 0%, #FCFCFC 15%, #FCFCFC 88%, #F6F6F6 100%);  	
@@ -142,8 +152,11 @@ pre{
 }
 
 .license{
-	color: lightgray;
-	border: 1px solid gainsboro;
+	color: #9DB8BF;
+	border-top: 1px solid #C2DFE3;
+	margin: 3em 0px 2em 0px;
+	padding: 1em 0px 0px 0px;
+	text-align:left;
 
 }
 
