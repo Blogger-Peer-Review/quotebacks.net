@@ -148,7 +148,21 @@ img{
 
 details{
 	margin-bottom:1em;
+	padding:8px;
+	border: 1px solid #d7d7d7;
+	border-radius:8px;
 }
+
+summary{
+	cursor:pointer;
+}
+
+
+details summary::-webkit-details-marker {
+  color: gray;
+  font-size: 80%;
+}
+
 
 pre{
 	width:inherit;
@@ -163,6 +177,8 @@ pre{
 	text-align:left;
 
 }
+
+
 
 
 // WELCOME PAGE
