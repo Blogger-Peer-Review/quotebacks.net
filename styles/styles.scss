@@ -165,12 +165,20 @@ pre{
 
 body.welcome {
   margin: 0px auto;
-  padding-top: 15rem;
-  padding-bottom: 3rem;
+  padding-top: 10em;
+  padding-bottom: 3em;
   line-height: 130%;
   width: 500px;
 }
 
 body.welcome ol li {
-  margin-bottom: .5rem;
+  margin-bottom: .5em;
+}
+
+.welcome-container{
+	margin:0px;
+	width: g(12,12);
+	@media(min-width:600px){
+		max-width:600px;
+	}
 }
