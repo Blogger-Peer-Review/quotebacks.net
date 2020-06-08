@@ -1,0 +1,148 @@
+@charset "UTF-8";
+// MIXINS
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin animation($args...) {
+  -webkit-animation: $args;
+  -moz-animation: $args;
+  animation: $args;
+}
+
+// Function to calculate a % width for the columns
+@function g($columns, $of){
+  @return($columns/$of) * 100%;
+}
+
+// Function to add consistent padding (gutter) between all columns. In this case 40px
+@mixin p(){
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body{
+	// font-family: "SF Pro Rounded", "SF Pro Text", "Arial", Sans-Serif;
+	// font-size: 16px;
+	font-family: "Arial", Sans-Serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+code,pre{
+	padding: 2px;
+	background-color:#EFEFEF;
+	border-radius: 2px;
+	font-size:14px;
+}
+
+.site-container{
+}
+
+.flex-container{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	@media (min-width: 600px){
+		flex-direction:row;
+		align-content:flex-start;
+		max-width: 960px;
+	}
+	padding-top: 150px;
+
+  margin: 0px auto;
+ 	height:100vh;
+}
+
+.left-menu{
+		margin-top: 3em;
+		width:g(3,12);
+		@media (max-width:960px){
+			display:none;
+		}
+	ul{
+		list-style-type:none;
+		padding-left:0px;
+		line-height:1.75em;
+		li{
+			a{
+				color:gray;
+				&:visited{
+					color:gray;
+				}
+				&:hover{
+					color:blue;
+					padding-left:2px;
+				}
+			}
+		}
+	}
+}
+
+.content-container{
+	margin-left:g(.5,12);
+	flex-basis: g(12,12);
+	width: g(12,12);
+	@media(min-width:600px){
+		flex-basis: g(5,12);
+		max-width:600px;
+	}
+}
+
+.content-block{
+	padding-top:3em;
+}
+
+#quotebacks-text{
+	font-weight: 700;
+	color:black;
+	text-decoration:none;
+	margin-bottom:1em;
+}
+
+#get-extension{
+	color: mediumslateblue;
+	font-size:14px;
+	text-align:center;
+	text-decoration:none;
+	padding: 8px 12px;
+	background-image: linear-gradient(0deg, #F6F6F6 0%, #FCFCFC 15%, #FCFCFC 88%, #FFFFFF 100%);
+	border: 1px solid #dedede;
+	/* Sketch doesnt export gradient borders at this point */
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.10);
+	border-radius: 4px;
+  	white-space: nowrap;
+  &:hover{
+  	border: 1px solid DEEPSKYBLUE;
+  }
+  &:focus{
+	background-image: linear-gradient(0deg, #FFFFFF 0%, #FCFCFC 15%, #FCFCFC 88%, #F6F6F6 100%);  	
+  }
+}
+
+
+video{
+	width:100%;
+	height:auto;
+	margin: 1em auto;
+}
+
+details{
+	margin-bottom:1em;
+}
+
+pre{
+	width:inherit;
+	white-space:pre-line;
+}
+
+.license{
+	color: lightgray;
+	border: 1px solid gainsboro;
+
+}
