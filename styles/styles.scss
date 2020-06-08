@@ -104,7 +104,7 @@ code,pre{
 }
 
 .content-block{
-	padding-top:3em;
+	padding-top:1em;
 }
 
 #quotebacks-text{
@@ -172,7 +172,6 @@ body.welcome {
   padding-top: 10em;
   padding-bottom: 3em;
   line-height: 130%;
-  width: 500px;
 }
 
 body.welcome ol li {
@@ -180,9 +179,17 @@ body.welcome ol li {
 }
 
 .welcome-container{
-	margin:0px;
+	@include p();
+	margin:0px auto;
 	width: g(12,12);
 	@media(min-width:600px){
 		max-width:600px;
+	}
+}
+
+img{
+	@media(max-width:600px){
+		width:100%;
+		height:auto;
 	}
 }
