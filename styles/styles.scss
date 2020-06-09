@@ -114,7 +114,7 @@ code,pre{
 	margin-bottom:1em;
 }
 
-#get-extension{
+.get-extension{
 	color: mediumslateblue;
 	font-size:14px;
 	text-align:center;
@@ -135,7 +135,8 @@ code,pre{
   }
 }
 
-#ff{
+.firefox-link{
+	opacity:.5;
 	margin-top: 1em;
 }
 
