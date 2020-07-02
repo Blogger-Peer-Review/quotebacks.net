@@ -64,8 +64,8 @@
 				<li><a target="_self" href="#FAQ">FAQ</a></li>
 				<li><a target="_self" href="#links">Links</a></li>
 			</ul>
-			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Get QuoteBacks Extension</a>
-			<div class="firefox-link"><a style="" class="get-extension" href="">Firefox Coming Soon</a></div>
+			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Quotebacks for Chrome</a>
+			<div class="firefox-link"><a style="" class="get-extension" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">Quotebacks for Firefox</a></div>
       		<ul>
 				<li><a target="_blank" href="https://github.com/Blogger-Peer-Review/QuoteBacks">Quotebacks on GitHub</a></li>
 			</ul>
@@ -80,8 +80,8 @@
 		
         <p>Quotebacks is a tool that makes it easy to grab snippets of text from around the web and convert them into embeddable blockquote web components.</p>
 
-        <blockquote class="quoteback" data-title="The pandemic shows why we need to bring back blogs" data-author="Jerry Brito" cite="https://sometimesright.com/">To me the long-neglected advantages of blogging are not just about better presentation of information, but about the level of discourse they once engendered and how it compares to Twitter today. Blogging has a higher cost than tweeting, so it filters for more serious (or at least more committed) posting, where quality trumps quantity. 
-	      <footer>Jerry Brito<cite><a href="https://sometimesright.com/">https://sometimesright.com/</a></cite></footer>
+        <blockquote class="quoteback" data-title="The pandemic shows why we need to bring back blogs" data-author="Jerry Brito" cite="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">To me the long-neglected advantages of blogging are not just about better presentation of information, but about the level of discourse they once engendered and how it compares to Twitter today. Blogging has a higher cost than tweeting, so it filters for more serious (or at least more committed) posting, where quality trumps quantity. 
+	      <footer>Jerry Brito<cite><a href="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">https://sometimesright.com/2020/04/25/blogging-vs-twitter/</a></cite></footer>
 	      </blockquote><script note="UPDATE THIS 4REALZ" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@tom-branch/quoteback.js"></script>
 
         <p>Quotebacks are like a quote retweet, but for any piece of content on the web. They work on any webpage, and gracefully fall back to a standard blockquote.</p>
@@ -100,7 +100,9 @@
 				<p>The <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"> Quotebacks Chrome extension</a> allows you to highlight any piece of text on the web and turn it into an embeddable quoteback.</p>
         <p>Use a keyboard shortcut on any page to save a snippet to your library:</p>
 
-        <p style="width:100%; text-align:center">Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
+        <p style="width:100%; text-align:center"><img style="height:30px;display:inline-block;margin-bottom:-8px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Chrome: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
+
+				<p style="width:100%; text-align:center"><img style="height:30px;display:inline-block;margin-bottom:-8px"  src="https://img.icons8.com/color/48/000000/firefox.png"/> Firefox: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span></p>
 
         <img style="width:100%; height:auto;" src="assets/popup.png">
         </p>
@@ -201,7 +203,13 @@
 					<p>
 						Some CMS editors (e.g. Ghost and Wordpress) handle embeds by adding a “html” block into the post instead of just copy and pasting it in. Try looking for an “insert HTML” option and see if that fixes it. If not ping us and we’ll see if we can help.
 					</p>
-				</details>						
+				</details>
+				<details>
+					<summary id="extension"><strong>I use another extension that uses the same keyboard shortcut?</strong></summary>
+					<p>
+						This is a known issue that we might have more elegant solves for in the future but for now you can re-map your chrome extension shortucts here: chrome://extensions/shortcuts and your <a href="https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox">Firefox shortcuts here</a>.
+					</p>
+				</details>										
 				<details>
 					<summary id="extension"><strong>How do I use Quotebacks in emails?</strong></summary>
 					<p>
@@ -212,9 +220,9 @@
 				</details>	
 
 				<details>
-					<summary id="extension"><strong>Can I embed Quotebacks in Roam?</strong></summary>
+					<summary id="extension"><strong>Can I embed Quotebacks in Roam or Notion?</strong></summary>
 					<p>
-						No, and yes. The quoteback HTML will format poorly inside Roam, but we have specifically created a Markdown export for your quotes so that you can paste quotes into Roam and Markdown editors quickly.
+						No, and yes. The quoteback HTML will format poorly inside Roam & Notion, but we have specifically created a Markdown export for your quotes so that you can paste quotes into Roam/Notion and other Markdown editors quickly.
 					</p>
 				</details>	
 
@@ -222,7 +230,7 @@
 					<summary id="extension"><strong>Can I use Quotebacks without the extension?</strong></summary>
 					<p>
 					Yes. If you want to develop with Quotebacks on your own site, include the latest quoteback.js file as a link in your head: <code>&lt;script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"&gt;</code>
-					If you are fine with not having new updates and prefer not to use live dependencies, feel free to simply download the latest <code>quoteback.js</code> and include it in your development files. It will convert all <code>&lt;<quoteback-component> files to Quotebacks.&gt;</code>
+					If you are fine with not having new updates and prefer not to use live dependencies, feel free to simply download the latest <code>quoteback.js</code> and include it in your development files. It will convert all <code>&lt;quoteback-component&gt;</code> elements to Quotebacks
 					</p>
 				</details>	
 
