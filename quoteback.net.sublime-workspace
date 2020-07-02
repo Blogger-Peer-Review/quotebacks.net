@@ -247,15 +247,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 14293,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -464,14 +455,12 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net",
-		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/assets",
-		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/styles"
-	],
 	"file_history":
 	[
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks/quoteback.js",
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks/test-webc.html",
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/index.html",
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks/quoteback-internal.js",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/welcome.html",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/quotebacks-site",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks/newcontent.js",
@@ -595,11 +584,7 @@
 		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/bad-interface-politics-in-facebooks-fake-news-filter.markdown",
 		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/preliminary-rules-for-discussing-meaning.markdown",
 		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_sass/_meaning-mechanics.scss",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_includes/custom-posts/meaning-mechanics.html",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/seeking-new-arrangement-homeownership.markdown",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_includes/custom-posts/brand-index.html",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_sass/_brand-index.scss",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/brand-index.markdown"
+		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_includes/custom-posts/meaning-mechanics.html"
 	],
 	"find":
 	{
@@ -634,41 +619,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14293,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2117,
-								2117
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 354.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -729,6 +681,18 @@
 		"selected_items":
 		[
 			[
+				"test",
+				"~/Documents/Work/2020/quotebacks/test-webc.html"
+			],
+			[
+				"quot",
+				"~/Documents/Work/2020/quotebacks/quoteback.js"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
 				"newcon",
 				"newcontent.js"
 			],
@@ -739,10 +703,6 @@
 			[
 				"mani",
 				"site.webmanifest"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"hea",
@@ -1231,14 +1191,6 @@
 			[
 				"mapping",
 				"_includes/custom-posts/mapping-the-self.html"
-			],
-			[
-				"mappin",
-				"_entries/mapping-the-self-in-the-desert-of-the-real.markdown"
-			],
-			[
-				"nyc",
-				"_entries/nyc-mini-storage.markdown"
 			]
 		],
 		"width": 0.0

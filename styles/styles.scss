@@ -119,13 +119,13 @@ code,pre{
 	font-size:14px;
 	text-align:center;
 	text-decoration:none;
-	padding: 8px 12px;
+	padding: 8px 10px;
 	background-image: linear-gradient(0deg, #F6F6F6 0%, #FCFCFC 15%, #FCFCFC 88%, #FFFFFF 100%);
 	border: 1px solid #C2DFE3;
 	/* Sketch doesnt export gradient borders at this point */
 	box-shadow: 0 0 2px 0 rgba(0,0,0,0.10);
 	border-radius: 4px;
-  	white-space: nowrap;
+	white-space: nowrap;
   &:hover{
   	border: 1px solid #9DB8BF;
   	opacity:1;
@@ -133,6 +133,10 @@ code,pre{
   &:focus{
 	background-image: linear-gradient(0deg, #FFFFFF 0%, #FCFCFC 15%, #FCFCFC 88%, #F6F6F6 100%);  	
   }
+}
+
+#firefox-a{
+	padding-right:17px;
 }
 
 .firefox-link{

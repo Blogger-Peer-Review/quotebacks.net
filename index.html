@@ -62,10 +62,11 @@
 				<li><a target="_self" href="#howto">How To Use</a></li>
 				<li><a target="_self" href="#why-quote">Why quote?</a></li>
 				<li><a target="_self" href="#FAQ">FAQ</a></li>
+				<li><a target="_self" href="#changelog">Changelog</a></li>
 				<li><a target="_self" href="#links">Links</a></li>
 			</ul>
-			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Quotebacks for Chrome</a>
-			<div class="firefox-link"><a style="" class="get-extension" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">Quotebacks for Firefox</a></div>
+			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Quotebacks for Chrome</a>
+			<div class="firefox-link"><a style="" id="firefox-a" class="get-extension" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/color/48/000000/firefox.png"/> Quotebacks for Firefox</a></div>
       		<ul>
 				<li><a target="_blank" href="https://github.com/Blogger-Peer-Review/QuoteBacks">Quotebacks on GitHub</a></li>
 			</ul>
@@ -95,19 +96,19 @@
         </p>
         <p>
         <br/>
-        <strong>The Quotebacks Chrome Extension</strong>
+        <strong>The Quotebacks Extension</strong>
         
-				<p>The <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"> Quotebacks Chrome extension</a> allows you to highlight any piece of text on the web and turn it into an embeddable quoteback.</p>
-        <p>Use a keyboard shortcut on any page to save a snippet to your library:</p>
+				<p>The <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"> Quotebacks extension</a> allows you to highlight any piece of text on the web and turn it into an embeddable quoteback.</p>
+        <p>Use a keyboard shortcut on any page to save a snippet to your library, or right click and select "Copy Quote" in the context menu.</p>
 
-        <p style="width:100%; text-align:center"><img style="height:30px;display:inline-block;margin-bottom:-8px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Chrome: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
+        <p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Chrome: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
 
-				<p style="width:100%; text-align:center"><img style="height:30px;display:inline-block;margin-bottom:-8px"  src="https://img.icons8.com/color/48/000000/firefox.png"/> Firefox: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span></p>
+				<p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px"  src="https://img.icons8.com/color/48/000000/firefox.png"/> Firefox: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span></p>
 
         <img style="width:100%; height:auto;" src="assets/popup.png">
         </p>
 
-        <p>Quotes you clip are saved to your Quoteback library and stored in your local Chrome browser storage in simple JSON format. You can export and import quotes easily.</p>        
+        <p>Quotes you clip are saved to your Quoteback library and stored in your browser's local storage in simple JSON format. You can export and import quotes easily.</p>        
 
         <img style="width:100%; height:auto;" src="assets/library.png">
 
@@ -181,7 +182,7 @@
 				<details>
 					<summary id="extension"><strong>Where are the quotes saved?</strong></summary>
 					<p>
-						All quotes are saved into chrome local storage. There is no central server. This means that quotes are *not* stored across machines and if you un-install the extension and/or chrome you will lose your quotes. However - quotes can be exported as a simple JSON file under the gear icon on the library page.
+						All quotes are saved into your browser's local storage. There is no central server. This means that quotes are *not* stored across machines and if you un-install the extension, you will lose your quotes. However - quotes can be exported as a simple JSON file under the gear icon on the library page.
 					</p>
 				</details>	
 
@@ -247,6 +248,24 @@
 					Oh bother. Hope it’s not a serious one. The best place to submit this is via a Github issue but if you’re not familiar with Github just ping us on Twitter / email and we’ll take a look.
 					</p>
 				</details>													
+			</div>
+
+			<div class="content-block" id="changelog">
+				<h3>Changelog - notable releases</h3>
+					<details>
+						<summary id="extension"><strong>v1.1.0</strong></summary>
+						<ul>
+							<li>The Firefox extension is live - <a href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">get it here!</a></li>
+						</ul>
+				</details>						
+					<details>
+						<summary id="extension"><strong>v1.0.3</strong></summary>
+						<ul>
+							<li>Added dark mode support - enable it by setting <code>darkmode="true"</code> on the blockquote embed.</li>
+							<li>Create a quoteback in the context menu with highlight &rarr; right click &rarr; Copy Quote.</li>
+							<li>Bug fixes and minor UI enhancements.</li>
+						</ul>
+				</details>	
 			</div>
 
 			<div class="content-block" id="links">
