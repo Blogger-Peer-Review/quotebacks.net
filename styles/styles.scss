@@ -1,4 +1,10 @@
 @charset "UTF-8";
+// RESET
+
+button{
+	all:unset;
+}
+
 // MIXINS
 
 @mixin transition($args...) {
@@ -51,6 +57,11 @@ code,pre{
 }
 
 .site-container{
+}
+
+hr{
+	border:none;
+	border-top:1px solid #c2dfe3;
 }
 
 .flex-container{

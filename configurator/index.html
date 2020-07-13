@@ -55,48 +55,58 @@
 			<div class="config-inner">
 				
 				<form class="configurator">
-					<label class="container">
+					<label class="input-container">
 						<div class="config-label">Article Text</div>
 						<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>
 					</label>
 
 					<div id="quote-metadata">
 
-						<label class="container">
+						<label id="quote-author" class="input-container">
 							<div class="config-label">Author</div>
-							<input class="config-input" placeholder="Author Name" id="quote-author">
+							<input class="config-input" placeholder="Author Name" >
 						</label>
 
-						<label class="container">
+						<label id="quote-title" class="input-container">
 							<div class="config-label">Title</div>
-							<input class="config-input" placeholder="Title" id="quote-title">
+							<input class="config-input" placeholder="Title">
 						</label>
 
 					</div>
 
-					<label class="container">
+					<label class="input-container">
 						<div class="config-label">URL</div>
 						<input class="config-input" placeholder="https://example.com/article-name" id="quote-url">
 					</label>
 					
 					<div id="theme-buttons">
-						<button id="theme-light">Light Theme</button>
-						<button id="theme-dark">Dark Theme</button>
-						<button id="theme-custom">Custom CSS</button>
+						<button class="theme-button" id="theme-light">Light Theme</button>
+						<button class="theme-button" id="theme-dark">Dark Theme</button>
+						<button class="theme-button" id="theme-custom">Custom CSS</button>
 					</div>
 					
-					<label class="container">
+					<label class="input-container">
 					  <input type="checkbox" checked="checked">
 					  <span class="checkmark"></span>
 					  Dark Mode Detection<br/>
-					  <span>Only select this if the website you’re publishing on has automatic dark mode Detection</span>
+					  <div class="checkbox-explainer">Only select this if the website you’re publishing on has automatic dark mode Detection</div>
 					</label>
 
 				</form>
 
+				<hr>
+				<div id="bookmarklet-container">Drag this <a href id="bookmarklet" src="quotebacks.net">Quotebacks Bookmarklet</a> to your bookmarks bar to use from any page.</div>
+
 			</div>
 		</div>
-		<div class="display-panel">Output quoteback here</div>
+		<div class="display-panel">
+
+<blockquote class="quoteback" darkmode="" data-title="The%20Garden%20of%20Forking%20Memes%3A%20How%20Digital%20Media%20Distorts%20Our%20Sense%20of%20Time" data-author="Aaron Z. Lewis" cite="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">
+Digital databases are “<a href="https://theconvivialsociety.substack.com/p/narrative-collapse" target="_blank" rel="noopener">unparalleled memory machines</a>” that have radically transformed how information and stories flow between grandparents and children, students and teachers, politicians and voters, journalists and citizens. What Marshall McLuhan called the “<a href="https://www.are.na/block/7828126" target="_blank" rel="noopener">perfect memory</a>” of computers has, in our time, spawned a <a href="http://mycours.es/gamedesign2012/files/2012/08/The-Garden-of-Forking-Paths-Jorge-Luis-Borges-1941.pdf" target="_blank" rel="noopener">garden</a> of competing narratives and conceptions of the past/present/future. Digital media serves up an inhumanly large corpus of data that becomes raw material for new subcultures, ideologies, and alternative histories. In today’s chaotic media environment, not even a global pandemic can restore a shared sense of Reality.
+<footer>Aaron Z. Lewis<cite> <a href="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes</a></cite></footer>
+</blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>			
+
+		</div>
 	</div>
 
 </body>
