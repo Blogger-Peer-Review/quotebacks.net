@@ -1,0 +1,44 @@
+.panel-container{
+	display:flex;
+	flex-direction:row;
+}
+
+.config-panel{
+	width:60vw;
+	height:100vh;
+	background-color: white;
+}
+.display-panel{
+	height:100vh;
+	width:40vw;
+	background-color:#FAFAFA;
+	border-left:1px solid #CFCFCF;
+}
+
+
+
+.config-inner{
+	max-width:550px;
+	margin:0px auto;
+}
+
+.config-label{
+	font-size: 12px;
+	font-weight: 500;
+	color:#111;	
+	margin-bottom:2px;
+}
+.config-input{
+	border: 1px solid #C2DFE3;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	padding:8px;
+	font-size:14px;
+}
+
+	#quote-text{
+		text-align: top;
+		width:100%;
+		height:200px;
+	}

@@ -28,9 +28,9 @@
 
 body{
 	background-color: #F7FEFF;
-	// font-family: "SF Pro Rounded", "SF Pro Text", "Arial", Sans-Serif;
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	// font-size: 16px;
-	font-family: "Arial", Sans-Serif;
+	// font-family: "Arial", Sans-Serif;
 	font-size: 16px;
 	line-height: 1.4;
 }
@@ -216,3 +216,8 @@ img{
 		height:auto;
 	}
 }
+
+
+//
+
+@import 'configurator';
