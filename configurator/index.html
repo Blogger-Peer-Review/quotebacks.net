@@ -112,13 +112,24 @@ Digital databases are “<a href="https://theconvivialsociety.substack.com/p/nar
 
 <script>
 $( document ).ready(function() {
+
+	$("#quote-text").keyup(function() {
+    	var component = document.querySelector("quoteback-component").shadowRoot;
+		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
+	});	
+
+
+
+
 	const params = new URLSearchParams(window.location.search);
 
 	if (params.has("title")){
 		$("#quote-text").html(params.get("quote"));
+		var component = document.querySelector("quoteback-component").shadowRoot;
+		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
+		
 		$("#quote-title").val(params.get("title"));
 		$("#quote-url").val(params.get("url"));
-
 	}
 });
 
