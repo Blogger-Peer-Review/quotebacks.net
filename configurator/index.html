@@ -116,7 +116,22 @@ $( document ).ready(function() {
 	$("#quote-text").keyup(function() {
     	var component = document.querySelector("quoteback-component").shadowRoot;
 		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
-	});	
+	});
+
+	$("#quote-author").keyup(function() {
+    	var component = document.querySelector("quoteback-component").shadowRoot;
+		component.querySelector(".quoteback-author").innerHTML = document.querySelector("#quote-author input").value;
+	});
+
+	$("#quote-title").keyup(function() {
+    	var component = document.querySelector("quoteback-component").shadowRoot;
+		component.querySelector(".quoteback-title").innerHTML = document.querySelector("#quote-title input").value;
+	});
+
+	$("#quote-url").keyup(function() {
+    	var component = document.querySelector("quoteback-component").shadowRoot;
+		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
+	});				
 
 
 
@@ -124,12 +139,19 @@ $( document ).ready(function() {
 	const params = new URLSearchParams(window.location.search);
 
 	if (params.has("title")){
-		$("#quote-text").html(params.get("quote"));
 		var component = document.querySelector("quoteback-component").shadowRoot;
+
+		$("#quote-text").html(params.get("quote"));
 		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
-		
-		$("#quote-title").val(params.get("title"));
+
+		$("#quote-title input").val(params.get("title"));
+		component.querySelector(".quoteback-title").innerHTML = document.querySelector("#quote-title input").value;
+
+
 		$("#quote-url").val(params.get("url"));
+		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
+
+
 	}
 });
 
