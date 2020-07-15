@@ -132,6 +132,7 @@ $( document ).ready(function() {
 	$("#quote-url").keyup(function() {
     	var component = document.querySelector("quoteback-component").shadowRoot;
 		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
+		component.querySelector(".mini-favicon").src = document.querySelector("#quote-url").value;
 	});				
 
 
@@ -151,9 +152,9 @@ $( document ).ready(function() {
 		$("#quote-author input").val(params.get("author"));
 		component.querySelector(".quoteback-author").innerHTML = document.querySelector("#quote-author input").value;
 
-
 		$("#quote-url").val(params.get("url"));
 		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
+		component.querySelector(".mini-favicon").src = document.querySelector("#quote-url").value;
 
 
 	}
