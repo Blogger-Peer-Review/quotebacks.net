@@ -56,7 +56,8 @@
 				<form class="configurator">
 					<label class="input-container">
 						<div class="config-label">Article Text</div>
-						<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>
+						<!--<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>-->
+						<div contenteditable="true" class="config-input" id="quote-text"></div>
 					</label>
 
 					<div id="quote-metadata">
@@ -115,7 +116,7 @@ $( document ).ready(function() {
 
 	$("#quote-text").keyup(function() {
     	var component = document.querySelector("quoteback-component").shadowRoot;
-		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
+		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").innerHTML;
 	});
 
 	$("#quote-author").keyup(function() {
@@ -142,7 +143,7 @@ $( document ).ready(function() {
 		var component = document.querySelector("quoteback-component").shadowRoot;
 
 		$("#quote-text").html(params.get("quote"));
-		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").value;
+		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").innerHTML;
 
 		$("#quote-title input").val(params.get("title"));
 		component.querySelector(".quoteback-title").innerHTML = document.querySelector("#quote-title input").value;
