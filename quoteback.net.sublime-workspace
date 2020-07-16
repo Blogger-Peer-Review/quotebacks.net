@@ -247,6 +247,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "configurator/index.html",
+			"settings":
+			{
+				"buffer_size": 7082,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -455,8 +464,16 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net"
+	],
 	"file_history":
 	[
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/quoteback.net.sublime-project",
+		"/Users/tobyshorin/Documents/urbit2/urbit/README.md",
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/configurator/index.html",
+		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/welcome/index.html",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks/quoteback.js",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks/test-webc.html",
 		"/Users/tobyshorin/Documents/Work/2020/quotebacks.net/index.html",
@@ -580,15 +597,11 @@
 		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_includes/custom-posts/after-authenticity.html",
 		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_site/entries/after-authenticity.html",
 		"/Users/tobyshorin/Desktop/Screen Shot 2018-04-03 at 12.15.05 PM.png",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/notes-on-multiplicity.markdown",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/bad-interface-politics-in-facebooks-fake-news-filter.markdown",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/preliminary-rules-for-discussing-meaning.markdown",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_sass/_meaning-mechanics.scss",
-		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_includes/custom-posts/meaning-mechanics.html"
+		"/Users/tobyshorin/Documents/Work/Subpixel Space/subpixel-space/_entries/notes-on-multiplicity.markdown"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -619,8 +632,47 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "configurator/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"file": "favicon-32x32.png",
+					"semi_transient": true,
+					"stack_index": 0,
+					"type": "image"
+				}
 			]
 		}
 	],
