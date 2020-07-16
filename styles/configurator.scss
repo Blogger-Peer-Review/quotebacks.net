@@ -93,6 +93,7 @@ body{
 	background-color:white;
 	color:#5C6D73;
 	margin-right:12px;
+	transition: all .15s ease;
 }
 #theme-dark{
 	background-color: #161717;
@@ -103,8 +104,8 @@ body{
 	background-color: #EBEBEB;
 	color:#979797;
 }
-#theme-selected{
-	border: 2px solid #395FE5;
+.theme-selected{
+	border: 1px solid #395FE5 !important;
 }
 
 .checkbox-explainer{

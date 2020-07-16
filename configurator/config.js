@@ -16,11 +16,15 @@ let dark = $("#theme-dark");
 
 dark.click(function(event){
 	event.preventDefault();
+	light.removeClass("theme-selected");
+	dark.addClass("theme-selected");
 	$(".display-panel").css("background-color", "#1F1F20");
 	$(".codeblock").css({"background-color": "#606367", "border": "1px solid #606367", "color":"lightgray"});
 })
 light.click(function(event){
 	event.preventDefault();
+	dark.removeClass("theme-selected");
+	light.addClass("theme-selected");
 	$(".display-panel").css("background-color", "#fafafa");
 	$(".codeblock").css({"background-color": "#f2f2f2", "border": "1px solid #C2DFE3", "color":"gray"});
 })
