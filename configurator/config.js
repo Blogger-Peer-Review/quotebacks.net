@@ -2,6 +2,8 @@ let copy = $("#copy-embed");
 
 $("#copy-embed").click(function(){
 	copy.html("Copied!");
+	embedCode = $('#embed-code').html();
+	copyToClipboard(embedCode);
 	setTimeout(function() {
 	  copy.html("&lt;&gt; Copy Embed");
 	}, 1000);	
@@ -22,3 +24,13 @@ light.click(function(event){
 	$(".display-panel").css("background-color", "#fafafa");
 	$(".codeblock").css({"background-color": "#f2f2f2", "border": "1px solid #C2DFE3", "color":"gray"});
 })
+
+
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
