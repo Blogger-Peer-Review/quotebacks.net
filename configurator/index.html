@@ -169,6 +169,12 @@ function updateComponent(){
 	component.querySelector(".quoteback-arrow").href = url
 	component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+url+"&sz=64";
 
+	var descendents = document.querySelector("#quote-text").querySelectorAll("*");
+        for (var i = 0; i < descendents.length; i++) {
+          e = descendents[i];
+          e.removeAttribute("style");
+        }
+
 	var embedcode = `<blockquote class="quoteback" darkmode="" data-title="${title}" data-author="${author}" cite="${url}">
 ${quote}
 <footer>${author}<cite> <a href="${url}">${url}</a></cite></footer>
