@@ -147,7 +147,6 @@ $( document ).ready(function() {
 	const params = new URLSearchParams(window.location.search);
 
 	if (params.has("title")){
-		var component = document.querySelector("quoteback-component").shadowRoot;
 
 		$("#quote-text").html(params.get("quote"));
 		$("#quote-title input").val(params.get("title"));
@@ -159,6 +158,9 @@ $( document ).ready(function() {
 	}
 
 function updateComponent(){
+
+	var component = document.querySelector("quoteback-component").shadowRoot;
+
 
 	var title = document.querySelector("#quote-title input").value;
 	var author = document.querySelector("#quote-author input").value;
