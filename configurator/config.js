@@ -2,8 +2,15 @@ let copy = $("#copy-embed");
 
 $("#copy-embed").click(function(){
 	copy.html("Copied!");
-	embedCode = $('#embed-code').html();
-	copyToClipboard(embedCode);
+	
+	var el = document.createElement('textarea');
+	var codetext = document.getElementById("embed-code").textContent;
+	el.textContent = codetext;
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand('copy');
+	document.body.removeChild(el);
+
 	setTimeout(function() {
 	  copy.html("&lt;&gt; Copy Embed");
 	}, 1000);	

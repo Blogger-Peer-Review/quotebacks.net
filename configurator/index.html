@@ -123,24 +123,20 @@
 $( document ).ready(function() {
 
 	$("#quote-text").keyup(function() {
-    	var component = document.querySelector("quoteback-component").shadowRoot;
-		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").innerHTML;
+    	updateComponent();
 	});
 
 	$("#quote-author").keyup(function() {
-    	var component = document.querySelector("quoteback-component").shadowRoot;
-		component.querySelector(".quoteback-author").innerHTML = document.querySelector("#quote-author input").value;
+    	updateComponent();
 	});
 
 	$("#quote-title").keyup(function() {
-    	var component = document.querySelector("quoteback-component").shadowRoot;
-		component.querySelector(".quoteback-title").innerHTML = document.querySelector("#quote-title input").value;
+		updateComponent();
+
 	});
 
 	$("#quote-url").keyup(function() {
-    	var component = document.querySelector("quoteback-component").shadowRoot;
-		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
-		component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+document.querySelector("#quote-url").value+"&sz=64";
+    	updateComponent();
 	});				
 
 
@@ -152,20 +148,36 @@ $( document ).ready(function() {
 		var component = document.querySelector("quoteback-component").shadowRoot;
 
 		$("#quote-text").html(params.get("quote"));
-		component.querySelector(".quoteback-content").innerHTML = document.querySelector("#quote-text").innerHTML;
-
 		$("#quote-title input").val(params.get("title"));
-		component.querySelector(".quoteback-title").innerHTML = document.querySelector("#quote-title input").value;
-
 		$("#quote-author input").val(params.get("author"));
-		component.querySelector(".quoteback-author").innerHTML = document.querySelector("#quote-author input").value;
-
 		$("#quote-url").val(params.get("url"));
-		component.querySelector(".quoteback-arrow").href = document.querySelector("#quote-url").value;
-		component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+document.querySelector("#quote-url").value+"&sz=64";
 
+		updateComponent();
 
 	}
+
+function updateComponent(){
+
+	var title = document.querySelector("#quote-title input").value;
+	var author = document.querySelector("#quote-author input").value;
+	var quote = document.querySelector("#quote-text").innerHTML;
+	var url = document.querySelector("#quote-url").value;
+
+	component.querySelector(".quoteback-content").innerHTML = quote
+	component.querySelector(".quoteback-title").innerHTML = title;
+	component.querySelector(".quoteback-author").innerHTML = author;
+	component.querySelector(".quoteback-arrow").href = url
+	component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+url+"&sz=64";
+
+	var embedcode = `<blockquote class="quoteback" darkmode="" data-title="${title}" data-author="${author}" cite="${url}">
+${quote}
+<footer>${author}<cite> <a href="${url}">${url}</a></cite></footer>
+</blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"><\/script>`;
+
+	$("#embed-code").text(embedcode);	
+	
+}
+
 });
 
 </script>
