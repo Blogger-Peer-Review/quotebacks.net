@@ -45,3 +45,5 @@ const copyToClipboard = str => {
   document.execCommand('copy');
   document.body.removeChild(el);
 };
+
+
