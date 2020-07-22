@@ -49,48 +49,41 @@
 <body>
 <body>
 
+	<div class="center">
+		<h2>Quote, reply, and converse across the open web</h2>
+	</div>
+
 	<div class="panel-container">
 		<div class="config-panel">
 			<div class="config-inner">
 				
 				<form class="configurator">
 					<label class="input-container">
-						<div class="config-label">Article Text</div>
 						<!--<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>-->
-						<div contenteditable="true" class="config-input" id="quote-text"></div>
+						<div contenteditable="true" class="config-input" id="quote-text">Article Text</div>
 					</label>
 
 					<div id="quote-metadata">
 
 						<label id="quote-author" class="input-container">
-							<div class="config-label">Author</div>
 							<input class="config-input" placeholder="Author Name" >
 						</label>
 
 						<label id="quote-title" class="input-container">
-							<div class="config-label">Title</div>
 							<input class="config-input" placeholder="Title">
 						</label>
 
 					</div>
 
 					<label class="input-container">
-						<div class="config-label">URL</div>
 						<input class="config-input" placeholder="https://example.com/article-name" id="quote-url">
 					</label>
 					
 					<div id="theme-buttons">
-						<button class="theme-button theme-selected" id="theme-light">Light Theme</button>
-						<button class="theme-button" id="theme-dark">Dark Theme</button>
-						<button class="theme-button" id="theme-custom">Custom CSS</button>
+						<button class="theme-button theme-selected" id="theme-light">Light</button>
+						<button class="theme-button" id="theme-dark">Dark</button>
+						<button class="theme-button" id="theme-detect">Detect User Preference</button>
 					</div>
-					
-					<label class="input-container">
-					  <input type="checkbox" checked="checked">
-					  <span class="checkmark"></span>
-					  Dark Mode Detection<br/>
-					  <div class="checkbox-explainer">Only select this if the website you’re publishing on has automatic dark mode Detection</div>
-					</label>
 
 				</form>
 
@@ -191,6 +184,249 @@ ${quote}
 });
 
 </script>
+
+
+
+<div class="site-container">
+	<div class="flex-container">
+
+		<div class="left-menu">
+			<ul>
+				<li ><a id="quotebacks-text" target="_self" href="#">Quotebacks</a></li>
+				<li><a target="_self" href="#howto">How To Use</a></li>
+				<li><a target="_self" href="#why-quote">Why quote?</a></li>
+				<li><a target="_self" href="#FAQ">FAQ</a></li>
+				<li><a target="_self" href="#changelog">Changelog</a></li>
+				<li><a target="_self" href="#links">Links</a></li>
+			</ul>
+			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Quotebacks for Chrome</a>
+			<div class="firefox-link"><a style="" id="firefox-a" class="get-extension" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/color/48/000000/firefox.png"/> Quotebacks for Firefox</a></div>
+      		<ul>
+				<li><a target="_blank" href="https://github.com/Blogger-Peer-Review/QuoteBacks">Quotebacks on GitHub</a></li>
+			</ul>
+			
+		</div>
+
+		<div class="content-container">
+
+			<div class="content-block" id="intro">
+				<h3 style="color:dodgerblue; line-height: 1.25em; font-family:'Times New Roman'; font-weight:400;"><em>Imagine quote-tweeting a paragraph of text and embedding it on your blog without losing context...</em></h2>
+        <h3>Introducing Quotebacks</h3>
+		
+        <p>Quotebacks is a tool that makes it easy to grab snippets of text from around the web and convert them into embeddable blockquote web components.</p>
+
+        <blockquote class="quoteback" data-title="The pandemic shows why we need to bring back blogs" data-author="Jerry Brito" cite="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">To me the long-neglected advantages of blogging are not just about better presentation of information, but about the level of discourse they once engendered and how it compares to Twitter today. Blogging has a higher cost than tweeting, so it filters for more serious (or at least more committed) posting, where quality trumps quantity. 
+	      <footer>Jerry Brito<cite><a href="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">https://sometimesright.com/2020/04/25/blogging-vs-twitter/</a></cite></footer>
+	      </blockquote><script note="UPDATE THIS 4REALZ" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@tom-branch/quoteback.js"></script>
+
+        <p>Quotebacks are like a quote retweet, but for any piece of content on the web. They work on any webpage, and gracefully fall back to a standard blockquote.</p>
+
+        <p>Thus, "Quotebacks" is three things: 
+	        <ol>
+	          <li>A web-native citation standard and quoting UX pattern</li>
+	          <li>A tiny library, <code>quoteback.js</code>, that converts HTML <code>&lt;blockquote class="quoteback"&gt;</code> tags into elegant interactive webcomponents</li>
+	        <li>A browser extension to create quoteback components and store any quotes you save to publish later.</li>
+	        </ol>
+        </p>
+        <p>
+        <br/>
+        <strong>The Quotebacks Extension</strong>
+        
+				<p>The <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"> Quotebacks extension</a> allows you to highlight any piece of text on the web and turn it into an embeddable quoteback.</p>
+        <p>Use a keyboard shortcut on any page to save a snippet to your library, or right click and select "Copy Quote" in the context menu.</p>
+
+        <p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Chrome: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
+
+				<p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px"  src="https://img.icons8.com/color/48/000000/firefox.png"/> Firefox: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span></p>
+
+        <img style="width:100%; height:auto;" src="assets/popup.png">
+        </p>
+
+        <p>Quotes you clip are saved to your Quoteback library and stored in your browser's local storage in simple JSON format. You can export and import quotes easily.</p>        
+
+        <img style="width:100%; height:auto;" src="assets/library.png">
+
+
+			</div>
+
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+
+			<div class="content-block" id="howto">
+				<h3>Installing and Using Quotebacks</h3>
+				<details>
+					<summary><strong>The Quotebacks Browser Extension</strong></summary>
+					<p>
+						After installing the Quotebacks <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Chrome extension</a>, navigate to any webpage, highlight some text, and press <strong>cmd+shift+s</strong> (ctrl+shift+s on Windows).
+						<video controls autoplay>
+						  <source src="assets/1.mp4" type="video/mp4">
+						</video>					
+						Quotes you've clipped are saved to your local storage in simple JSON. You can export your quotes and do anything you want with them.
+						<video controls autoplay>
+						  <source src="assets/2.mp4" type="video/mp4">
+						</video>		
+						Copy the embed link of any quote to generate an embeddable quoteback, then paste that into your blog markdown file or HTML page. Note the Javascript file links to <code>quoteback.js</code>, hosted through reliable CDN jsdelivr.
+						<video controls autoplay>
+						  <source src="assets/3.mp4" type="video/mp4">
+						</video>
+						Your quoteback will be embedded!
+						<video controls autoplay>
+						  <source src="assets/4.mp4" type="video/mp4">
+						</video>					
+					</p>
+				</details>			
+				<details>
+					<summary id="extension"><strong>The Quotebacks library</strong></summary>
+					<p>
+						If you'd like to use quotebacks in your own web development, download the source code from <a href="https://github.com/Blogger-Peer-Review/QuoteBacks">Github</a>, or include quoteback.js as a dependendency in your head:
+					</p>
+					<pre>&lt;script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"&gt;</script></pre>
+				</details>				
+			</div>
+
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+
+			<div class="content-block" id="why-quote">
+				<h3>Why Quote?</h3>
+
+				<p>Our overal design goals are to help <em>maintain context</em> when composing new texts with quotes, to enable <em>generous quotations</em>, and to facilitate quoting <em>all texts and voices</em>. A bit more about our goals.</p>
+				<p>
+					First and foremost, quoting gives context, helping readers see where an author is coming from. Quotes and citations are an important part in making and remembering history. And looking looking towards the future, they allow us to better see, understand, and build on the vast graph of human knowledge—the original "web"—that other, greater internet of which this one is just part.
+				</p>
+				<p>
+					Secondly, quoting another person can be <em>generous</em>. Generous quoting can mean raising another's voice alongside your own, affirming their authorship, and striving to not take them out of context. One can quote generously, no matter whether one is agreeing or disagreeing with another author.
+				</p>
+				<p>
+					And of course, quoting is also a <a href="https://www.are.na/sal-hamerman/the-politics-of-citation">political act</a>, in which we elevate and validate the voice of another individual. We're inspired by this challenge to think about our own quoting and citation acts:
+				</p>
+
+				<blockquote class="quoteback" data-title="Citation Practices" data-author="Eve Tuck, K. Wayne Yang, Rubén Gaztambide-Fernándeza" cite="http://www.criticalethnicstudiesjournal.org/citation-practices">
+				<p>Reflect on the way you approach referencing the work of others in your own writing, presenting and thinking. Whose work do you build on to make arguments, describe the field and the problems you engage in your work? Who are you citing, and why do you cite them (and not others)? [...] Indeed, our practices of citation make and remake our fields, making some forms of knowledge peripheral. We often cite those who are more famous, even if their contributions appropriate subaltern ways of knowing.</p>
+				<footer>Eve Tuck, K. Wayne Yang, Rubén Gaztambide-Fernándeza<cite><a href="http://www.criticalethnicstudiesjournal.org/citation-practices">http://www.criticalethnicstudiesjournal.org/citation-practices</a></cite></footer>
+				</blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
+			</div>
+
+
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
+
+			<div class="content-block" id="FAQ">
+				<h3>FAQ</h3>
+				<details>
+					<summary id="extension"><strong>Where are the quotes saved?</strong></summary>
+					<p>
+						All quotes are saved into your browser's local storage. There is no central server. This means that quotes are *not* stored across machines and if you un-install the extension, you will lose your quotes. However - quotes can be exported as a simple JSON file under the gear icon on the library page.
+					</p>
+				</details>	
+
+				<details>
+					<summary id="extension"><strong>What JS am I embedding?</strong></summary>
+					<p>
+						The JS file that generates the quoteback embed is a small javascript file that is served via CDN JSdelivr directly from Github. You can take a look yourself at the file here. There is no tracking either on the file or within the javascript so we have no insight into how or where these embeds are used.
+					</p>
+				</details>
+
+				<details>
+					<summary id="extension"><strong>Can I change the hotkey?</strong></summary>
+					<p>
+						On Google Chrome, visit chrome://extensions/shortcuts and you'll be able to edit it there.
+					</p>
+				</details>
+				<details>
+					<summary id="extension"><strong>I embedded a Quoteback but it’s showing up as a bunch of HTML?</strong></summary>
+					<p>
+						Some CMS editors (e.g. Ghost and Wordpress) handle embeds by adding a “html” block into the post instead of just copy and pasting it in. Try looking for an “insert HTML” option and see if that fixes it. If not ping us and we’ll see if we can help.
+					</p>
+				</details>
+				<details>
+					<summary id="extension"><strong>I use another extension that uses the same keyboard shortcut?</strong></summary>
+					<p>
+						This is a known issue that we might have more elegant solves for in the future but for now you can re-map your chrome extension shortucts here: chrome://extensions/shortcuts and your <a href="https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox">Firefox shortcuts here</a>.
+					</p>
+				</details>										
+				<details>
+					<summary id="extension"><strong>How do I use Quotebacks in emails?</strong></summary>
+					<p>
+					Embedding things into emails is… tricky. Most solutions that “just work” have a custom implementation behind the scenes (e.g. Substack’s tweet embeds). For now:</p>
+					<p>1) The default HTML underneath a quoteback is a element which should degrade gracefully in emails without the JS file</p>
+					<p>2) You can choose to “save as image” to download a quoteback as a static image file that should work well in emails, tweets, and so on.
+					</p>
+				</details>	
+
+				<details>
+					<summary id="extension"><strong>Can I embed Quotebacks in Roam or Notion?</strong></summary>
+					<p>
+						No, and yes. The quoteback HTML will format poorly inside Roam & Notion, but we have specifically created a Markdown export for your quotes so that you can paste quotes into Roam/Notion and other Markdown editors quickly.
+					</p>
+				</details>	
+
+				<details>
+					<summary id="extension"><strong>Can I use Quotebacks without the extension?</strong></summary>
+					<p>
+					Yes. If you want to develop with Quotebacks on your own site, include the latest quoteback.js file as a link in your head: <code>&lt;script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"&gt;</code>
+					If you are fine with not having new updates and prefer not to use live dependencies, feel free to simply download the latest <code>quoteback.js</code> and include it in your development files. It will convert all <code>&lt;quoteback-component&gt;</code> elements to Quotebacks
+					</p>
+				</details>	
+
+				<details>
+					<summary id="extension"><strong>Why doesn’t Quotebacks do X?</strong></summary>
+					<p>
+						Quotebacks is in beta. If you have suggestions for how to evolve and improve the tool please get in touch!
+					</p>
+				</details>	
+
+				<details>
+					<summary id="extension"><strong>I found a bug!</strong></summary>
+					<p>
+					Oh bother. Hope it’s not a serious one. The best place to submit this is via a Github issue but if you’re not familiar with Github just ping us on Twitter / email and we’ll take a look.
+					</p>
+				</details>													
+			</div>
+
+			<div class="content-block" id="changelog">
+				<h3>Changelog - notable releases</h3>
+					<details>
+						<summary id="extension"><strong>v1.1.0</strong></summary>
+						<ul>
+							<li>The Firefox extension is live - <a href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">get it here!</a></li>
+						</ul>
+				</details>						
+					<details>
+						<summary id="extension"><strong>v1.0.3</strong></summary>
+						<ul>
+							<li>Added dark mode support - enable it by setting <code>darkmode="true"</code> on the blockquote embed.</li>
+							<li>Create a quoteback in the context menu with highlight &rarr; right click &rarr; Copy Quote.</li>
+							<li>Bug fixes and minor UI enhancements.</li>
+						</ul>
+				</details>	
+			</div>
+
+			<div class="content-block" id="links">
+				<h3>Links</h3>
+				<p>
+					Quotebacks source code is located on <a href="https://github.com/Blogger-Peer-Review/QuoteBacks">Github</a>.
+				</p>
+				<p>
+					Quotebacks is maintained by Tom Critchlow and Toby Shorin.
+				</p>
+				<p>
+					Tom blogs at <a href="http://tomcritchlow.com">tomcritchlow.com</a> and can be reached at <a href="mailto:tjcritchlow@gmail.com">tjcritchlow@gmail.com</a>.
+				</p>
+				<p>Toby blogs at <a href="https://subpixel.space">Subpixel Space</a> and can be reached at <a href="mailto:tobyshorin@gmail.com">tobyshorin@gmail.com</a>.</p>
+
+				<div class="license">
+					Quotebacks is open source software available under the MIT license.
+				</div>
+
+			</div>	
+
+
+		</div>
+
+	</div>
+
+</div>
 
 
 

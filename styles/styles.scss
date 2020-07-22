@@ -32,11 +32,12 @@ button{
   padding-right: 10px;
 }
 
+
+// GLOBAL STYLES
+
 body{
 	background-color: #F7FEFF;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-	// font-size: 16px;
-	// font-family: "Arial", Sans-Serif;
 	font-size: 16px;
 	line-height: 1.4;
 }
@@ -63,6 +64,18 @@ hr{
 	border:none;
 	border-top:1px solid #c2dfe3;
 }
+
+
+h1{
+	font-size:28px;
+	font-weight: 400;
+}
+h2{
+	font-size:24px;
+	font-weight: normal;
+}
+
+// CUSTOM STYLES
 
 .flex-container{
 	display:flex;
