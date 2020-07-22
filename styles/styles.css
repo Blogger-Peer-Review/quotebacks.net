@@ -1,6 +1,11 @@
 button {
   all: unset; }
 
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
 body {
   background-color: #F7FEFF;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -167,6 +172,20 @@ body {
   margin: 0px;
   background-color: white; }
 
+.supernav {
+  margin-top: 10px; }
+  .supernav .nav-items {
+    list-style-type: none;
+    margin-left: none;
+    display: inline; }
+    .supernav .nav-items li {
+      display: inline;
+      padding: 2px;
+      margin-right: 14px; }
+      .supernav .nav-items li a {
+        text-decoration: none;
+        color: black; }
+
 .panel-container {
   display: flex;
   flex-direction: row;
@@ -311,7 +330,7 @@ body {
     background-image: linear-gradient(0deg, #FFFFFF 0%, #FCFCFC 15%, #FCFCFC 88%, #F6F6F6 100%); }
 
 .center {
-  margin: 0px auto;
+  margin: 3rem auto 0px auto;
   text-align: center; }
 
 .main {

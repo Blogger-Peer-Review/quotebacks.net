@@ -35,6 +35,12 @@ button{
 
 // GLOBAL STYLES
 
+html{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;	
+}
+
 body{
 	background-color: #F7FEFF;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;

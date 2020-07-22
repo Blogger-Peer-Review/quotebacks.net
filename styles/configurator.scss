@@ -3,6 +3,24 @@ body{
 	background-color:white;
 }
 
+.supernav{
+	margin-top: 10px;
+	.nav-items{
+		list-style-type:none;
+		margin-left:none;
+		display:inline;
+		li{
+			display:inline;
+			padding: 2px;
+			margin-right:14px;
+			a{
+				text-decoration:none;
+				color:black;
+			}
+		}
+	}
+}
+
 .panel-container{
 	display:flex;
 	flex-direction:row;
@@ -182,7 +200,7 @@ body{
 
 
 .center{
-	margin: 0px auto;
+	margin: 3rem auto 0px auto;
 	text-align:center;
 }
 
