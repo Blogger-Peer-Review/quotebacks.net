@@ -17,6 +17,24 @@ $("#copy-embed").click(function(){
 });
 
 
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
+
+
+tippy('#bookmarklet-container', {
+  content: 'Drag me into your bookmarks bar, then click while selecting text on any page.',
+});
+
+tippy('#knowledgeGraph', {
+  content: 'Coming soon',
+});
+
 
 let light = $("#theme-light");
 let dark = $("#theme-dark");
@@ -35,15 +53,3 @@ light.click(function(event){
 	$(".display-panel").css("background-color", "#ffffff");
 	$(".codeblock").css({"background-color": "#f2f2f2", "border": "1px solid #C2DFE3", "color":"gray"});
 })
-
-
-const copyToClipboard = str => {
-  const el = document.createElement('textarea');
-  el.value = str;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
-};
-
-
