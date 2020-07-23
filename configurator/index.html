@@ -47,86 +47,98 @@
 </head>
 
 <body>
-	<div class="supernav">
-		<ul class="nav-items">
-			<li><strong>Quotebacks</strong></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#blogroll">Blogroll</a></li>
-			<li><a href="#opensource">Open Source</a></li>
-			<li><a href="#extensions">Extensions</a></li>
-			<li><span style="color:gray;">Knowledge Graph</span></li>
-			<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Chrome Extension &rarr;</a></li>
-			<li><a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">Firefox Extension &rarr;</a></li>
-			<li><a target="_blank" rel="noopener" href="https://discord.gg/F4srNaW">Discord &rarr;</a></li>
-			<li><a rel="payment" href="bitcoin:3JKby73kKizAhsnR2BqusSVKGt5rTuKH9s?amount=1.0?message='take yourselves to quoteback steakhouse'">Send BTC &rarr;</a></li>
-		</ul>
-	</div>
+<div class="supernav">
+	<ul class="nav-items">
+		<li><strong>Quotebacks</strong></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#blogroll">Blogroll</a></li>
+		<li><a href="#opensource">Open Source</a></li>
+		<li><a href="#extensions">Extensions</a></li>
+		<li><span style="color:gray;">Knowledge Graph</span></li>
+		<li><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Chrome Extension &rarr;</a></li>
+		<li><a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">Firefox Extension &rarr;</a></li>
+		<li><a target="_blank" rel="noopener" href="https://discord.gg/F4srNaW">Discord &rarr;</a></li>
+		<li><a rel="payment" href="bitcoin:3JKby73kKizAhsnR2BqusSVKGt5rTuKH9s?amount=1.0?message='take yourselves to quoteback steakhouse'">Send BTC &rarr;</a></li>
+	</ul>
+</div>
 
-	<div class="center">
-		<h2>Quote, reply, and converse across the open web.</h2>
-	</div>
+<div class="center">
+	<h2>Quote, reply, and converse across the open web.</h2>
+</div>
 
-	<div class="panel-container">
-		<div class="config-panel">
-			<div class="config-inner">
-				
-				<form class="configurator">
-					<label class="input-container">
-						<!--<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>-->
-						<div contenteditable="true" class="config-input" id="quote-text">Article Text</div>
+<div class="panel-container">
+	<div class="config-panel">
+		<div class="config-inner">
+			
+			<form class="configurator">
+				<label class="input-container">
+					<!--<textarea class="config-input" placeholder="Paste quote text" id="quote-text"></textarea>-->
+					<div contenteditable="true" class="config-input" id="quote-text">Article Text</div>
+				</label>
+
+				<div id="quote-metadata">
+
+					<label id="quote-author" class="input-container">
+						<input class="config-input" placeholder="Author Name" >
 					</label>
 
-					<div id="quote-metadata">
-
-						<label id="quote-author" class="input-container">
-							<input class="config-input" placeholder="Author Name" >
-						</label>
-
-						<label id="quote-title" class="input-container">
-							<input class="config-input" placeholder="Title">
-						</label>
-
-					</div>
-
-					<label class="input-container">
-						<input class="config-input" placeholder="https://example.com/article-name" id="quote-url">
+					<label id="quote-title" class="input-container">
+						<input class="config-input" placeholder="Title">
 					</label>
-					
-					<div id="theme-buttons">
-						<button class="theme-button theme-selected" id="theme-light">Light</button>
-						<button class="theme-button" id="theme-dark">Dark</button>
-						<button class="theme-button" id="theme-detect">Detect User Preference</button>
-					</div>
 
-				</form>
-
-				<hr>
-				<div id="bookmarklet-container">Drag this <a href="javascript:(function()%7Bjavascript%3A%20(function()%20%7B%0A%20%20%20%20function%20removeEmpty(elem)%20%7B%0A%20%20%20%20%20%20%20%20var%20children%20%3D%20elem.children%3B%0A%20%20%20%20%20%20%20%20for%20(var%20i%20%3D%200%3B%20i%20%3C%20children.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(children%5Bi%5D.textContent.trim()%20%3D%3D%3D%20''%20%26%26%20children%5Bi%5D.innerHTML.trim().length%20%3D%3D%3D%200)%20children%5Bi%5D.parentNode.removeChild(children%5Bi%5D)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20elem%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20convertAbsolute(url)%20%7B%0A%20%20%20%20%20%20%20%20let%20absolute%20%3D%20new%20URL(url%2C%20document.baseURI).href%3B%0A%20%20%20%20%20%20%20%20return%20absolute%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20loadScript(url%2C%20callback)%20%7B%0A%20%20%20%20%20%20%20%20var%20head%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3B%0A%20%20%20%20%20%20%20%20var%20script%20%3D%20document.createElement(%22script%22)%3B%0A%20%20%20%20%20%20%20%20script.src%20%3D%20url%3B%0A%20%20%20%20%20%20%20%20var%20done%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(!done%20%26%26%20(!this.readyState%20%7C%7C%20this.readyState%20%3D%3D%20%22loaded%22%20%7C%7C%20this.readyState%20%3D%3D%20%22complete%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20done%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20callback()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20null%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20head.removeChild(script)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20head.appendChild(script)%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20getSelectionText()%20%7B%0A%20%20%20%20%20%20%20%20var%20text%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20if%20(window.getSelection)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20selectionhtml%20%3D%20rangy.getSelection().toHtml()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20cleaned%20%3D%20selectionhtml.replace(%2F(%3C%5C%2F%3F(%3F%3Aa%7Cb%7Cp%7Cimg%7Ch1%7Ch2%7Ch3%7Ch4%7Ch5%7Cem%7Cstrong%7Cul%7Col%7Cli%7Cblockquote)%5B%5E%3E%5D*%3E)%7C%3C%5B%5E%3E%5D%2B%3E%2Fig%2C%20'%241')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20htmlfragment%20%3D%20document.createRange().createContextualFragment(cleaned)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20descendents%20%3D%20htmlfragment.querySelectorAll(%22*%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20(var%20i%20%3D%200%3B%20i%20%3C%20descendents.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e%20%3D%20descendents%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.removeAttribute(%22style%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20links%20%3D%20htmlfragment.querySelectorAll(%22a%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20links.forEach(e%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.href%20%3D%20convertAbsolute(e.href)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.setAttribute(%22target%22%2C%20%22_blank%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.setAttribute(%22rel%22%2C%20%22noopener%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20images%20%3D%20htmlfragment.querySelectorAll(%22img%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20images.forEach(e%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.src%20%3D%20convertAbsolute(e.src)%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20div%20%3D%20document.createElement('div')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20div.appendChild(htmlfragment.cloneNode(true))%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20removeEmpty(div)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html%20%3D%20div.innerHTML%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20(html)%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20if%20(document.selection%20%26%26%20document.selection.type%20!%3D%20%22Control%22)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text%20%3D%20document.selection.createRange().text%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20function%20getMeta(metaName)%20%7B%0A%20%20%20%20%20%20%20%20const%20metas%20%3D%20document.getElementsByTagName('meta')%3B%0A%20%20%20%20%20%20%20%20for%20(let%20i%20%3D%200%3B%20i%20%3C%20metas.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(metas%5Bi%5D.getAttribute('name')%20%3D%3D%3D%20metaName)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20metas%5Bi%5D.getAttribute('content')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(metas%5Bi%5D.getAttribute('property')%20%3D%3D%3D%20metaName)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20metas%5Bi%5D.getAttribute('content')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20''%3B%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20function%20blogquote()%20%7B%0A%20%20%20%20%20%20%20%20loadScript(%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Frangy%2F1.3.0%2Frangy-core.min.js%22%2C%20function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(getMeta(%22twitter%3Atitle%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20getMeta(%22twitter%3Atitle%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(getMeta(%22og%3Atitle%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20getMeta(%22og%3Atitle%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20document.title%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(getMeta(%22author%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20getMeta(%22author%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20getMeta(%22twitter%3Asite%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20encodeURIComponent(title)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20url%20%3D%20encodeURIComponent(document.location)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20quote%20%3D%20encodeURIComponent(getSelectionText())%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20encodeURIComponent(author)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20url%20%3D%20%60https%3A%2F%2Fquotebacks.net%2Fconfigurator%2F%3Furl%3D%24%7Burl%7D%26title%3D%24%7Btitle%7D%26author%3D%24%7Bauthor%7D%26quote%3D%24%7Bquote%7D%60%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20window.open(url)%3B%0A%20%20%20%20%20%20%20%20%7D)%0A%20%20%20%20%7D%0A%20%20%20%20blogquote()%0A%7D)()%7D)()%3B" id="bookmarklet">Quotebacks Bookmarklet</a> to your bookmarks bar to use from any page.</div>
-				<div>
-					<p class="testimonial">"added another quoteback. product is so good once you use it" —@mhdempsey</p>
-					<p class="testimonial">"it triggers abundance mindset which usually, I feel, ends up having nonlinear positive effects" -@sonyasupposedly</p>
 				</div>
+
+				<label class="input-container">
+					<input class="config-input" placeholder="https://example.com/article-name" id="quote-url">
+				</label>
+				
+				<div id="theme-buttons">
+					<button class="theme-button theme-selected" id="theme-light">Light</button>
+					<button class="theme-button" id="theme-dark">Dark</button>
+					<button class="theme-button" id="theme-detect">Detect User Preference</button>
+				</div>
+
+			</form>
+
+			<hr>
+			<div>
+				<p class="testimonial">"added another quoteback. product is so good once you use it" —@mhdempsey</p>
+				<p class="testimonial">"it triggers abundance mindset which usually, I feel, ends up having nonlinear positive effects" -@sonyasupposedly</p>
 			</div>
 		</div>
-		<div class="display-panel">
-
-			<div class="display-contents">
-				
-				<blockquote class="quoteback" darkmode="" data-title="The%20Garden%20of%20Forking%20Memes%3A%20How%20Digital%20Media%20Distorts%20Our%20Sense%20of%20Time" data-author="Aaron Z. Lewis" cite="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">
-				Digital databases are “<a href="https://theconvivialsociety.substack.com/p/narrative-collapse" target="_blank" rel="noopener">unparalleled memory machines</a>” that have radically transformed how information and stories flow between grandparents and children, students and teachers, politicians and voters, journalists and citizens. What Marshall McLuhan called the “<a href="https://www.are.na/block/7828126" target="_blank" rel="noopener">perfect memory</a>” of computers has, in our time, spawned a <a href="http://mycours.es/gamedesign2012/files/2012/08/The-Garden-of-Forking-Paths-Jorge-Luis-Borges-1941.pdf" target="_blank" rel="noopener">garden</a> of competing narratives and conceptions of the past/present/future. Digital media serves up an inhumanly large corpus of data that becomes raw material for new subcultures, ideologies, and alternative histories. In today’s chaotic media environment, not even a global pandemic can restore a shared sense of Reality.
-				<footer>Aaron Z. Lewis<cite> <a href="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes</a></cite></footer>
-				</blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>						
-
-				<pre class="codeblock" id="embed-code">		
-				</pre>
-				<button id="copy-embed" >&lt;&gt; Copy Embed</button>
-
-
-			</div>	
-
-		</div>
 	</div>
+	<div class="display-panel">
 
+		<div class="display-contents">
+			
+			<blockquote class="quoteback" darkmode="" data-title="The%20Garden%20of%20Forking%20Memes%3A%20How%20Digital%20Media%20Distorts%20Our%20Sense%20of%20Time" data-author="Aaron Z. Lewis" cite="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">
+			Digital databases are “<a href="https://theconvivialsociety.substack.com/p/narrative-collapse" target="_blank" rel="noopener">unparalleled memory machines</a>” that have radically transformed how information and stories flow between grandparents and children, students and teachers, politicians and voters, journalists and citizens. What Marshall McLuhan called the “<a href="https://www.are.na/block/7828126" target="_blank" rel="noopener">perfect memory</a>” of computers has, in our time, spawned a <a href="http://mycours.es/gamedesign2012/files/2012/08/The-Garden-of-Forking-Paths-Jorge-Luis-Borges-1941.pdf" target="_blank" rel="noopener">garden</a> of competing narratives and conceptions of the past/present/future. Digital media serves up an inhumanly large corpus of data that becomes raw material for new subcultures, ideologies, and alternative histories. In today’s chaotic media environment, not even a global pandemic can restore a shared sense of Reality.
+			<footer>Aaron Z. Lewis<cite> <a href="https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes">https://aaronzlewis.com/2020/07/07/the-garden-of-forking-memes</a></cite></footer>
+			</blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>						
+
+			<pre class="codeblock" id="embed-code">		
+			</pre>
+			<button id="copy-embed" >&lt;&gt; Copy Embed</button>
+
+
+		</div>	
+
+	</div>
+</div>
+
+
+<div class="main">
+	<div class="cta-container">
+			<div class="button-container">
+				<div id="bookmarklet-container"><a href="javascript:(function()%7Bjavascript%3A%20(function()%20%7B%0A%20%20%20%20function%20removeEmpty(elem)%20%7B%0A%20%20%20%20%20%20%20%20var%20children%20%3D%20elem.children%3B%0A%20%20%20%20%20%20%20%20for%20(var%20i%20%3D%200%3B%20i%20%3C%20children.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(children%5Bi%5D.textContent.trim()%20%3D%3D%3D%20''%20%26%26%20children%5Bi%5D.innerHTML.trim().length%20%3D%3D%3D%200)%20children%5Bi%5D.parentNode.removeChild(children%5Bi%5D)%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20elem%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20convertAbsolute(url)%20%7B%0A%20%20%20%20%20%20%20%20let%20absolute%20%3D%20new%20URL(url%2C%20document.baseURI).href%3B%0A%20%20%20%20%20%20%20%20return%20absolute%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20loadScript(url%2C%20callback)%20%7B%0A%20%20%20%20%20%20%20%20var%20head%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3B%0A%20%20%20%20%20%20%20%20var%20script%20%3D%20document.createElement(%22script%22)%3B%0A%20%20%20%20%20%20%20%20script.src%20%3D%20url%3B%0A%20%20%20%20%20%20%20%20var%20done%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(!done%20%26%26%20(!this.readyState%20%7C%7C%20this.readyState%20%3D%3D%20%22loaded%22%20%7C%7C%20this.readyState%20%3D%3D%20%22complete%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20done%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20callback()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20script.onload%20%3D%20script.onreadystatechange%20%3D%20null%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20head.removeChild(script)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20head.appendChild(script)%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20function%20getSelectionText()%20%7B%0A%20%20%20%20%20%20%20%20var%20text%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20if%20(window.getSelection)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20selectionhtml%20%3D%20rangy.getSelection().toHtml()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20cleaned%20%3D%20selectionhtml.replace(%2F(%3C%5C%2F%3F(%3F%3Aa%7Cb%7Cp%7Cimg%7Ch1%7Ch2%7Ch3%7Ch4%7Ch5%7Cem%7Cstrong%7Cul%7Col%7Cli%7Cblockquote)%5B%5E%3E%5D*%3E)%7C%3C%5B%5E%3E%5D%2B%3E%2Fig%2C%20'%241')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20htmlfragment%20%3D%20document.createRange().createContextualFragment(cleaned)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20descendents%20%3D%20htmlfragment.querySelectorAll(%22*%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20(var%20i%20%3D%200%3B%20i%20%3C%20descendents.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e%20%3D%20descendents%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.removeAttribute(%22style%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20links%20%3D%20htmlfragment.querySelectorAll(%22a%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20links.forEach(e%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.href%20%3D%20convertAbsolute(e.href)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.setAttribute(%22target%22%2C%20%22_blank%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.setAttribute(%22rel%22%2C%20%22noopener%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20images%20%3D%20htmlfragment.querySelectorAll(%22img%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20images.forEach(e%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.src%20%3D%20convertAbsolute(e.src)%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20div%20%3D%20document.createElement('div')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20div.appendChild(htmlfragment.cloneNode(true))%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20removeEmpty(div)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20html%20%3D%20div.innerHTML%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20(html)%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20if%20(document.selection%20%26%26%20document.selection.type%20!%3D%20%22Control%22)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20text%20%3D%20document.selection.createRange().text%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20function%20getMeta(metaName)%20%7B%0A%20%20%20%20%20%20%20%20const%20metas%20%3D%20document.getElementsByTagName('meta')%3B%0A%20%20%20%20%20%20%20%20for%20(let%20i%20%3D%200%3B%20i%20%3C%20metas.length%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(metas%5Bi%5D.getAttribute('name')%20%3D%3D%3D%20metaName)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20metas%5Bi%5D.getAttribute('content')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(metas%5Bi%5D.getAttribute('property')%20%3D%3D%3D%20metaName)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20metas%5Bi%5D.getAttribute('content')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20''%3B%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20function%20blogquote()%20%7B%0A%20%20%20%20%20%20%20%20loadScript(%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Frangy%2F1.3.0%2Frangy-core.min.js%22%2C%20function()%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(getMeta(%22twitter%3Atitle%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20getMeta(%22twitter%3Atitle%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20if%20(getMeta(%22og%3Atitle%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20getMeta(%22og%3Atitle%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20document.title%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20(getMeta(%22author%22))%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20getMeta(%22author%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20getMeta(%22twitter%3Asite%22)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20title%20%3D%20encodeURIComponent(title)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20url%20%3D%20encodeURIComponent(document.location)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20quote%20%3D%20encodeURIComponent(getSelectionText())%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20author%20%3D%20encodeURIComponent(author)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20url%20%3D%20%60https%3A%2F%2Fquotebacks.net%2Fconfigurator%2F%3Furl%3D%24%7Burl%7D%26title%3D%24%7Btitle%7D%26author%3D%24%7Bauthor%7D%26quote%3D%24%7Bquote%7D%60%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20window.open(url)%3B%0A%20%20%20%20%20%20%20%20%7D)%0A%20%20%20%20%7D%0A%20%20%20%20blogquote()%0A%7D)()%7D)()%3B" id="bookmarklet">&#9733;&nbsp;&nbsp;Quotebacks Bookmarklet</a></div>	
+
+				<a class="get-extension btn" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"><img src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Get Quotebacks for Chrome</a>
+				
+				<a id="firefox-a" class="get-extension btn" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/"><img src="https://img.icons8.com/color/48/000000/firefox.png"/> Get Quotebacks for Firefox</a>			
+			</div>
+		</div>
+	</div>	
+</div>
 
 
 <script>
@@ -256,7 +268,7 @@ ${quote}
 	</div>
 </div>
 
-<div class="main">
+<div class="main bluebg">
 	<div class="main-panel-container">
 		<div class="panel">
 			<h2 id="opensource">Develop and build on Quotebacks open source library and UX pattern.</h2>
@@ -319,109 +331,10 @@ ${quote}
 	</div>
 </div>
 
-
-
-
-<div class="site-container">
-	<div class="flex-container">
-
-		<div class="left-menu">
-			<ul>
-				<li ><a id="quotebacks-text" target="_self" href="#">Quotebacks</a></li>
-				<li><a target="_self" href="#howto">How To Use</a></li>
-				<li><a target="_self" href="#why-quote">Why quote?</a></li>
-				<li><a target="_self" href="#FAQ">FAQ</a></li>
-				<li><a target="_self" href="#changelog">Changelog</a></li>
-				<li><a target="_self" href="#links">Links</a></li>
-			</ul>
-			<a class="get-extension" href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Quotebacks for Chrome</a>
-			<div class="firefox-link"><a style="" id="firefox-a" class="get-extension" href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/"><img style="width:18px; height:auto;display:inline-block;margin-bottom:-4px; margin-right:2px" src="https://img.icons8.com/color/48/000000/firefox.png"/> Quotebacks for Firefox</a></div>
-				<li><a target="_blank" href="https://github.com/Blogger-Peer-Review/QuoteBacks">Quotebacks on GitHub</a></li>
-			
-		</div>
-
-		<div class="content-container">
-
-			<div class="content-block" id="intro">
-				<h3 style="color:dodgerblue; line-height: 1.25em; font-family:'Times New Roman'; font-weight:400;"><em>Imagine quote-tweeting a paragraph of text and embedding it on your blog without losing context...</em></h2>
-        <h3>Introducing Quotebacks</h3>
-		
-        <p>Quotebacks is a tool that makes it easy to grab snippets of text from around the web and convert them into embeddable blockquote web components.</p>
-
-        <blockquote class="quoteback" data-title="The pandemic shows why we need to bring back blogs" data-author="Jerry Brito" cite="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">To me the long-neglected advantages of blogging are not just about better presentation of information, but about the level of discourse they once engendered and how it compares to Twitter today. Blogging has a higher cost than tweeting, so it filters for more serious (or at least more committed) posting, where quality trumps quantity. 
-	      <footer>Jerry Brito<cite><a href="https://sometimesright.com/2020/04/25/blogging-vs-twitter/">https://sometimesright.com/2020/04/25/blogging-vs-twitter/</a></cite></footer>
-	      </blockquote><script note="UPDATE THIS 4REALZ" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@tom-branch/quoteback.js"></script>
-
-        <p>Quotebacks are like a quote retweet, but for any piece of content on the web. They work on any webpage, and gracefully fall back to a standard blockquote.</p>
-
-        <p>Thus, "Quotebacks" is three things: 
-	        <ol>
-	          <li>A web-native citation standard and quoting UX pattern</li>
-	          <li>A tiny library, <code>quoteback.js</code>, that converts HTML <code>&lt;blockquote class="quoteback"&gt;</code> tags into elegant interactive webcomponents</li>
-	        <li>A browser extension to create quoteback components and store any quotes you save to publish later.</li>
-	        </ol>
-        </p>
-        <p>
-        <br/>
-        <strong>The Quotebacks Extension</strong>
-        
-				<p>The <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach"> Quotebacks extension</a> allows you to highlight any piece of text on the web and turn it into an embeddable quoteback.</p>
-        <p>Use a keyboard shortcut on any page to save a snippet to your library, or right click and select "Copy Quote" in the context menu.</p>
-
-        <p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px" src="https://img.icons8.com/fluent/48/000000/chrome.png"/> Chrome: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">&#8984;+shift+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">ctrl+shift+s</span></p>
-
-				<p style="width:100%; text-align:center"><img style="width:30px; height:auto;display:inline-block;margin-bottom:-8px"  src="https://img.icons8.com/color/48/000000/firefox.png"/> Firefox: Mac: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span>&nbsp;&nbsp;&nbsp;Windows: <span style="font-size:16px; border-radius: 4px; padding:4px; border: 1px solid cyan; background-color: AliceBlue;">alt+s</span></p>
-
-        <img style="width:100%; height:auto;" src="assets/popup.png">
-        </p>
-
-        <p>Quotes you clip are saved to your Quoteback library and stored in your browser's local storage in simple JSON format. You can export and import quotes easily.</p>        
-
-        <img style="width:100%; height:auto;" src="assets/library.png">
-
-
-			</div>
-
-			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
-			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
-
-			<div class="content-block" id="howto">
-				<h3>Installing and Using Quotebacks</h3>
-				<details>
-					<summary><strong>The Quotebacks Browser Extension</strong></summary>
-					<p>
-						After installing the Quotebacks <a href="https://chrome.google.com/webstore/detail/quotebacks-quote-the-web/makakhdegdcmmbbhepafcghpdkbemach">Chrome extension</a>, navigate to any webpage, highlight some text, and press <strong>cmd+shift+s</strong> (ctrl+shift+s on Windows).
-						<video controls autoplay>
-						  <source src="assets/1.mp4" type="video/mp4">
-						</video>					
-						Quotes you've clipped are saved to your local storage in simple JSON. You can export your quotes and do anything you want with them.
-						<video controls autoplay>
-						  <source src="assets/2.mp4" type="video/mp4">
-						</video>		
-						Copy the embed link of any quote to generate an embeddable quoteback, then paste that into your blog markdown file or HTML page. Note the Javascript file links to <code>quoteback.js</code>, hosted through reliable CDN jsdelivr.
-						<video controls autoplay>
-						  <source src="assets/3.mp4" type="video/mp4">
-						</video>
-						Your quoteback will be embedded!
-						<video controls autoplay>
-						  <source src="assets/4.mp4" type="video/mp4">
-						</video>					
-					</p>
-				</details>			
-				<details>
-					<summary id="extension"><strong>The Quotebacks library</strong></summary>
-					<p>
-						If you'd like to use quotebacks in your own web development, download the source code from <a href="https://github.com/Blogger-Peer-Review/QuoteBacks">Github</a>, or include quoteback.js as a dependendency in your head:
-					</p>
-					<pre>&lt;script src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"&gt;</script></pre>
-				</details>				
-			</div>
-
-
-			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
-			<div style="width:100%; height:1em; border-top:1px solid #C2DFE3;"></div>
-
-			<div class="content-block" id="FAQ">
+<div class="main">
+	<div class="main-panel-container">
+		<div class="panel">
+<div class="content-block" id="FAQ">
 				<h3>FAQ</h3>
 				<details>
 					<summary id="extension"><strong>Where are the quotes saved?</strong></summary>
@@ -492,57 +405,13 @@ ${quote}
 					Oh bother. Hope it’s not a serious one. The best place to submit this is via a Github issue but if you’re not familiar with Github just ping us on Twitter / email and we’ll take a look.
 					</p>
 				</details>													
-			</div>
-
-			<div class="content-block" id="changelog">
-				<h3>Changelog - notable releases</h3>
-					<details>
-						<summary id="extension"><strong>v1.1.0</strong></summary>
-						<ul>
-							<li>The Firefox extension is live - <a href="https://addons.mozilla.org/en-US/firefox/addon/quotebacks-quote-the-web/">get it here!</a></li>
-						</ul>
-				</details>						
-					<details>
-						<summary id="extension"><strong>v1.0.3</strong></summary>
-						<ul>
-							<li>Added dark mode support - enable it by setting <code>darkmode="true"</code> on the blockquote embed.</li>
-							<li>Create a quoteback in the context menu with highlight &rarr; right click &rarr; Copy Quote.</li>
-							<li>Bug fixes and minor UI enhancements.</li>
-						</ul>
-				</details>	
-			</div>
-
-			<div class="content-block" id="links">
-				<h3>Links</h3>
-				<p>
-					Quotebacks source code is located on <a href="https://github.com/Blogger-Peer-Review/QuoteBacks">Github</a>.
-				</p>
-				<p>
-					Quotebacks is maintained by Tom Critchlow and Toby Shorin.
-				</p>
-				<p>
-					Tom blogs at <a href="http://tomcritchlow.com">tomcritchlow.com</a> and can be reached at <a href="mailto:tjcritchlow@gmail.com">tjcritchlow@gmail.com</a>.
-				</p>
-				<p>Toby blogs at <a href="https://subpixel.space">Subpixel Space</a> and can be reached at <a href="mailto:tobyshorin@gmail.com">tobyshorin@gmail.com</a>.</p>
-
-				<div class="license">
-					Quotebacks is open source software available under the MIT license.
-				</div>
-
-			</div>	
-
-
+			</div>		
 		</div>
-
+		<div class="panel"></div>
 	</div>
-
 </div>
 
-
-
-
-
-</body>
+<footer></footer>
 
 </body>
 
