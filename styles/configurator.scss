@@ -4,11 +4,15 @@ body{
 }
 
 .supernav{
-	margin-top: 10px;
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	padding:10px 20px;
 	.nav-items{
 		list-style-type:none;
 		margin-left:none;
 		display:inline;
+		padding-inline-start: 0px;
 		li{
 			display:inline;
 			padding: 2px;
@@ -23,11 +27,13 @@ body{
 
 .panel-container{
 	display:flex;
-	flex-direction:row;
-	border-bottom:1px solid #c2dfe3;
-	justify-content: center;	
-	align-items:top;
+	flex-direction:column;
 	padding-bottom:2rem;
+	@media(min-width:800px){
+		flex-direction:row;
+		border-bottom:1px solid #c2dfe3;
+		justify-content: center;
+	}
 }
 
 .config-panel{
@@ -85,6 +91,10 @@ body{
 	#quote-title{
 		flex-grow:1;
 	}
+}
+
+.testimonial{
+	color:#606367;	
 }
 
 
@@ -220,21 +230,37 @@ body{
 	}	
 }
 
+.main-container-noflex{
+	@media(min-width:800px){
+		margin:0px 100px;
+		flex-direction:row;
+	}	
+}
+
 .left-panel{
 	padding: 2rem;
 	width:100%;
-	border-right: 1px solid #c2dfe3 ;
+	border-right: 1px solid #c2dfe3;
+	transition: opacity .2s ease;
 	@media(min-width:800px){
-		width: 50%;	
+		width: 50%;
+		opacity:.4;
+		&:hover{
+			opacity:1;
+		}		
 	}
-
 }
 .right-panel{
 	padding:2rem;
 	color: #606367;
 	width:100%;
-	@media(min-width:600px){
+	transition: opacity .2s ease;
+	@media(min-width:800px){
 		width: 50%;
+		opacity:.4;
+		&:hover{
+			opacity:1;
+		}		
 	}
 }
 
@@ -258,6 +284,7 @@ body{
 	}
 }
 
+// OSS
 
 .quotebacks-dl{
 	display:inline;
@@ -279,5 +306,27 @@ body{
 	}
 	&:hover{
 		cursor:pointer;
+	}
+}
+
+.panel{
+	padding: 2rem;
+	width:100%;
+	transition: opacity .2s ease;
+	@media(min-width:800px){
+		width: 50%;
+	}
+}
+
+
+.button-container{
+	display:flex;
+	padding-top:1rem;
+	@media(min-width:800px){
+		flex-direction:row;
+		justify-content: start;
+		.get-extension{
+			margin-right:6px;
+		}
 	}
 }

@@ -32,7 +32,7 @@ light.click(function(event){
 	event.preventDefault();
 	dark.removeClass("theme-selected");
 	light.addClass("theme-selected");
-	$(".display-panel").css("background-color", "#fafafa");
+	$(".display-panel").css("background-color", "#ffffff");
 	$(".codeblock").css({"background-color": "#f2f2f2", "border": "1px solid #C2DFE3", "color":"gray"});
 })
 
