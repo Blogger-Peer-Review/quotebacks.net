@@ -42,7 +42,7 @@ html{
 
 body{
 	margin:0px;
-	background-color:white;
+	background-color: #fff;
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 	font-size: 16px;
 	line-height: 1.4;
@@ -201,6 +201,10 @@ pre{
 }
 
 .config-panel{
+	padding:10px;
+	@media(min-width:800px){
+		padding:0px;
+	}
 }
 .display-panel{
 	max-width:600px;
@@ -305,6 +309,9 @@ pre{
 
 #bookmarklet-container{
 	font-size:14px;
+	@media(max-width:800px){
+		margin-bottom:20px;
+	}
 	#bookmarklet{
 		color: #395FE6;
 		font-weight:500;
@@ -388,7 +395,7 @@ pre{
 	font-size: 14px;
 	line-height: 24px;
 	text-align: center;
-	color: white;
+	color: #ffffff;
 	transition: all .1s ease;
 	// position:absolute;
 	// left:50%;
@@ -433,11 +440,12 @@ pre{
 }
 
 .left-panel{
-	padding: 2rem;
-	width:100%;
+	padding: 10px;
+	width:auto;
 	border-right: 1px solid #c2dfe3;
 	transition: opacity .2s ease;
 	@media(min-width:800px){
+		padding: 2rem;
 		width: 50%;
 		opacity:.4;
 		&:hover{
@@ -446,11 +454,12 @@ pre{
 	}
 }
 .right-panel{
-	padding:2rem;
+	padding:10px;
 	color: #606367;
-	width:100%;
+	width:auto;
 	transition: opacity .2s ease;
 	@media(min-width:800px){
+		padding:2rem;
 		width: 50%;
 		opacity:.4;
 		&:hover{
@@ -458,6 +467,18 @@ pre{
 		}		
 	}
 }
+
+.panel{
+	padding: 10px;
+	width:auto;
+	transition: opacity .2s ease;
+	@media(min-width:800px){
+		width: 50%;
+		padding:2rem;
+	}
+}
+
+
 
 .bluebg{
 	background-color:#F9FEFF;
@@ -520,15 +541,6 @@ pre{
 	}
 }
 
-.panel{
-	padding: 2rem;
-	width:100%;
-	transition: opacity .2s ease;
-	@media(min-width:800px){
-		width: 50%;
-	}
-}
-
 
 
 
@@ -559,5 +571,34 @@ img{
 	@media(max-width:600px){
 		width:100%;
 		height:auto;
+	}
+}
+
+// FOOTER
+
+footer{
+	background-color: #5C6D73;
+	color: #fff;
+	padding:1rem;
+	@media(min-width:800px){
+		padding: 2rem 120px;
+	}
+	.footernav{
+		margin-bottom:2rem;
+		.nav-items{
+			list-style-type:none;
+			margin-left:none;
+			display:inline;
+			padding-inline-start: 0px;
+			li{
+				display:inline;
+				padding: 2px;
+				margin-right:14px;
+				a{
+					text-decoration:none;
+					color:#fff;
+				}
+			}
+		}
 	}
 }
