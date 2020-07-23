@@ -154,23 +154,50 @@ function updateComponent(){
 
 	var component = document.querySelector("quoteback-component").shadowRoot;
 
-
 	var title = document.querySelector("#quote-title input").value;
 	var author = document.querySelector("#quote-author input").value;
 	var quote = document.querySelector("#quote-text").innerHTML;
 	var url = document.querySelector("#quote-url").value;
 
-	component.querySelector(".quoteback-content").innerHTML = quote
-	component.querySelector(".quoteback-title").innerHTML = title;
+
+	if(quote != "Article Text"){
+		component.querySelector(".quoteback-content").innerHTML = quote
+	};
+
+	if(title){
+		component.querySelector(".quoteback-title").innerHTML = title;
+	};
+	
+	
 	component.querySelector(".quoteback-author").innerHTML = author;
-	component.querySelector(".quoteback-arrow").href = url
-	component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+url+"&sz=64";
+	
+
+	if(url){
+		component.querySelector(".quoteback-arrow").href = url
+		component.querySelector(".mini-favicon").src = "https://s2.googleusercontent.com/s2/favicons?domain_url="+url+"&sz=64";
+	}
+	
 
 	var descendents = document.querySelector("#quote-text").querySelectorAll("*");
         for (var i = 0; i < descendents.length; i++) {
           e = descendents[i];
           e.removeAttribute("style");
         }
+
+	var links = htmlfragment.querySelectorAll("a");
+	links.forEach(e => {
+		e.href = convertAbsolute(e.href);
+		e.setAttribute("target", "_blank");
+		e.setAttribute("rel", "noopener");
+	});
+
+	var images = htmlfragment.querySelectorAll("img");
+	images.forEach(e => {
+		e.src = convertAbsolute(e.src)
+	});
+
+
+
 
 	var embedcode = `<blockquote class="quoteback" darkmode="" data-title="${title}" data-author="${author}" cite="${url}">
 ${quote}
@@ -180,6 +207,12 @@ ${quote}
 	$("#embed-code").text(embedcode);	
 	
 }
+
+function convertAbsolute(url) {
+        let absolute = new URL(url, document.baseURI).href;
+        return absolute;
+    }
+
 
 });
 
