@@ -352,6 +352,18 @@ pre {
     border-radius: 4px;
     width: fit-content; }
 
+.blogroll {
+  display: flex;
+  flex-flow: row wrap; }
+  .blogroll .bloglink {
+    color: white;
+    background-color: #395FE5;
+    padding: 2px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 6px;
+    margin-right: 6px; }
+
 .quotebacks-dl {
   display: inline;
   padding: 10px 10px;
