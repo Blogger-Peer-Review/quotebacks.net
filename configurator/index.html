@@ -211,14 +211,14 @@ function updateComponent(){
           e.removeAttribute("style");
         }
 
-	var links = htmlfragment.querySelectorAll("a");
+	var links = document.querySelector("#quote-text").querySelectorAll("a");
 	links.forEach(e => {
 		e.href = convertAbsolute(e.href);
 		e.setAttribute("target", "_blank");
 		e.setAttribute("rel", "noopener");
 	});
 
-	var images = htmlfragment.querySelectorAll("img");
+	var images = document.querySelector("#quote-text").querySelectorAll("img");
 	images.forEach(e => {
 		e.src = convertAbsolute(e.src)
 	});
