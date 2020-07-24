@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Quotebacks Blogroll</title>
+    </head>
+    <body>
+        <outline text="Quotebacks" title="Quotebacks">
+            <outline type="rss" text="CJ Eller" title="CJ Eller" xmlUrl="https://blog.cjeller.site/feed/" htmlUrl="https://blog.cjeller.site/"/>
+            <outline type="rss" text="Interconnected" title="Interconnected" xmlUrl="http://interconnected.org/home/;atom" htmlUrl="http://interconnected.org/home"/>
+            <outline type="rss" text="Michael Dempsey: Blog" title="Michael Dempsey: Blog" xmlUrl="https://www.michaeldempsey.me/blog/feed/" htmlUrl="https://www.michaeldempsey.me/blog"/>
+            <outline type="rss" text="Niklas' blog" title="Niklas' blog" xmlUrl="http://niklasblog.com/?feed=rss2" htmlUrl="https://niklasblog.com"/>
+            <outline type="rss" text="Blog – Coin Center" title="Blog – Coin Center" xmlUrl="http://coincenter.org/category/blog/feed/" htmlUrl="https://www.coincenter.org"/>
+            <outline type="rss" text="diasyrmus » Feed" title="diasyrmus » Feed" xmlUrl="https://diasyrmus.com/feed/" htmlUrl="https://diasyrmus.com"/>
+            <outline type="rss" text="I never knew" title="I never knew" xmlUrl="http://feeds.feedburner.com/inevernu" htmlUrl="http://i.never.nu"/>
+            <outline type="rss" text="aaronzlewis.com" title="aaronzlewis.com" xmlUrl="https://aaronzlewis.com/feed.xml" htmlUrl="https://aaronzlewis.com"/>
+            <outline type="rss" text="Sonya Supposedly" title="Sonya Supposedly" xmlUrl="https://www.sonyasupposedly.com/rss/" htmlUrl="https://www.sonyasupposedly.com/"/>
+            <outline type="rss" text="Manton Reece" title="Manton Reece" xmlUrl="http://www.manton.org/rss.xml" htmlUrl="https://www.manton.org/"/>
+            <outline type="rss" text="Subpixel Space" title="Subpixel Space" xmlUrl="http://subpixel.space/feed.xml" htmlUrl="http://subpixel.space"/>
+            <outline type="rss" text="Ness Labs" title="Ness Labs" xmlUrl="https://nesslabs.com/feed" htmlUrl="https://nesslabs.com"/>
+            <outline type="rss" text="tomcritchlow.com" title="tomcritchlow.com" xmlUrl="http://tomcritchlow.com/feed" htmlUrl="http://tomcritchlow.com"/>
+        </outline>
+    </body>
+</opml>
